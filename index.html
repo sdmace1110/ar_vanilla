@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack Round</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚔️ Attack Round ⚔️</h1>
+            <p class="subtitle">A Vanilla JavaScript Battle Game</p>
+        </header>
+
+        <div class="game-area">
+            <div class="player-section">
+                <h2>Player</h2>
+                <div class="character-card player">
+                    <div class="health-bar">
+                        <div class="health-fill" id="player-health" style="width: 100%"></div>
+                    </div>
+                    <p class="health-text">HP: <span id="player-hp">100</span>/100</p>
+                    <p class="attack-power">⚔️ Attack: <span id="player-attack">20</span></p>
+                </div>
+            </div>
+
+            <div class="vs-section">
+                <div class="round-info">
+                    <h3>Round <span id="round-number">1</span></h3>
+                    <p id="game-status">Choose your action!</p>
+                </div>
+            </div>
+
+            <div class="enemy-section">
+                <h2>Enemy</h2>
+                <div class="character-card enemy">
+                    <div class="health-bar">
+                        <div class="health-fill enemy-health" id="enemy-health" style="width: 100%"></div>
+                    </div>
+                    <p class="health-text">HP: <span id="enemy-hp">100</span>/100</p>
+                    <p class="attack-power">⚔️ Attack: <span id="enemy-attack">15</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="attack-btn" class="btn btn-attack">⚔️ Attack</button>
+            <button id="defend-btn" class="btn btn-defend">🛡️ Defend</button>
+            <button id="special-btn" class="btn btn-special">✨ Special Attack</button>
+        </div>
+
+        <div class="battle-log">
+            <h3>Battle Log</h3>
+            <div id="log-content"></div>
+        </div>
+
+        <div class="game-controls">
+            <button id="reset-btn" class="btn btn-reset">🔄 New Game</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
